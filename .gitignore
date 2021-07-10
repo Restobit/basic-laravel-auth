@@ -1,0 +1,37 @@
+.idea/
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+npm-debug.log
+yarn-error.log
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+# Builded files by laravel mix
+/public/js
+/public/css
+/public/assets/svg-font-icons
+/resources/scss/components/_icon.scss
+/public/mix-manifest.json
+
+storage/*.key
+.env
+.env.backup
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+
+docker-compose.override.yml

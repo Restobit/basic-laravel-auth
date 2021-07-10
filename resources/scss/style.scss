@@ -1,0 +1,28 @@
+@charset "UTF-8";
+// Variables and bootstrap override
+@import "abstracts/variables";
+@import "abstracts/bootstrap-override";
+// Vendors
+@import "vendor/bootstrap/bootstrap";
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.css";
+// Abstracts
+@import "abstracts/functions";
+@import "abstracts/mixins";
+// Base stuff
+@import "base/fonts";
+@import "base/base";
+@import "base/typography";
+@import "base/helpers";
+// Layout-related sections
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navigation";
+@import "layout/sidebar";
+// Components
+@import "components/icon";
+
+@import "vendor/sb-admin/sb-admin-2";
+
+
+
+

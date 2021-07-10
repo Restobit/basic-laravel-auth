@@ -1,0 +1,52 @@
+//------------------------------
+// This is a generated file DO NOT EDIT!!!!!!!!!!!!!!!!
+//------------------------------
+
+@font-face {
+	font-family: "{{fontName}}";
+	src: {{{src}}};
+}
+
+@if not variable-exists('icons') {
+	$icons: () !global;
+}
+
+$icons: map-merge($icons, (
+	{{#each codepoints}}
+    '{{@key}}': ('{{../fontName}}' '{{this}}'),
+	{{/each}}
+));
+
+@mixin icon($name) {
+	line-height: 1;
+	display: inline-block;
+    vertical-align: middle;
+
+	$icon: map-get($icons, $name);
+	&:before {
+		font-family: nth($icon, 1) !important;
+		font-style: normal;
+		font-weight: normal !important;
+		vertical-align: top;
+		content: #{'"\\' + nth($icon, 2) + '"'};
+	}
+}
+
+{{baseSelector}} {
+	line-height: 1;
+	display: inline-block;
+    vertical-align: middle;
+}
+
+{{baseSelector}}:before {
+	font-family: {{fontName}} !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+{{#each codepoints}}
+.{{../classPrefix}}{{@key}}:before {
+	content: "\\{{this}}";
+}
+{{/each}}
